@@ -1,6 +1,6 @@
 {
   "name": "less-plugin-autoprefixer",
-  "version": "1.5.1",
+  "version": "2.0.0",
   "description": "autoprefixer plugin for less.js",
   "keywords": [
     "less plugins",
@@ -24,6 +24,9 @@
     "node": ">=8.9.0"
   },
   "scripts": {
+    "prerelease": "npm t",
+    "release": "standard-version -s",
+    "postrelease": "npm publish && git push --follow-tags",
     "test": "eslint lib"
   },
   "dependencies": {
@@ -34,6 +37,7 @@
     "eslint": "^4.19.1",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-zillow": "^1.0.0-rc.1",
-    "prettier": "^1.13.5"
+    "prettier": "^1.13.5",
+    "standard-version": "^4.4.0"
   }
 }
