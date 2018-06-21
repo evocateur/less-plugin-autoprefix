@@ -1,5 +1,5 @@
 {
-  "name": "less-plugin-autoprefix",
+  "name": "less-plugin-autoprefixer",
   "version": "1.5.1",
   "description": "autoprefixer plugin for less.js",
   "keywords": [
@@ -12,14 +12,11 @@
     "name": "Luke Page"
   },
   "contributors": [
-    "The Core Less Team"
+    "Daniel Stockman <daniel.stockman@gmail.com>"
   ],
-  "bugs": {
-    "url": "https://github.com/less/less-plugin-autoprefix/issues"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/less/less-plugin-autoprefix.git"
+    "url": "https://github.com/evocateur/less-plugin-autoprefix.git"
   },
   "license": "Apache-2.0",
   "main": "lib/index.js",

@@ -1,35 +1,44 @@
-[![NPM version](https://badge.fury.io/js/less-plugin-autoprefix.svg)](http://badge.fury.io/js/less-plugin-autoprefix) [![Dependencies](https://david-dm.org/less/less-plugin-autoprefix.svg)](https://david-dm.org/less/less-plugin-autoprefix) [![devDependency Status](https://david-dm.org/less/less-plugin-autoprefix/dev-status.svg)](https://david-dm.org/less/less-plugin-autoprefix#info=devDependencies) [![optionalDependency Status](https://david-dm.org/less/less-plugin-autoprefix/optional-status.svg)](https://david-dm.org/less/less-plugin-autoprefix#info=optionalDependencies)
+[![NPM version](https://badge.fury.io/js/less-plugin-autoprefixer.svg)](http://badge.fury.io/js/less-plugin-autoprefixer)
 
-less-plugin-autoprefix
-========================
+# less-plugin-autoprefixer
 
-Uses autoprefixer to add prefixes to css after conversion from less.
+Uses [autoprefixer][] to add prefixes to css after conversion from less.
 
-## lessc usage
+This is an up-to-date fork of [less-plugin-autoprefix][].
 
-Install..
-
-```
-npm install -g less-plugin-autoprefix
-```
-
-and then on the command line,
+## Usage
 
 ```
-lessc file.less --autoprefix="browsers"
+npm install less less-plugin-autoprefixer
 ```
 
-The browsers are a comma seperated list of [browsers as specified with autoprefixer](https://github.com/postcss/autoprefixer#browsers).
+### CLI
 
-## Programmatic usage
+```
+npx lessc file.less --autoprefix="> 0.5%, not dead"
+```
+
+The `--autoprefix` option value is a [browserslist query](https://github.com/browserslist/browserslist#best-practices).
+
+### JS
 
 ```js
-var LessPluginAutoPrefix = require('less-plugin-autoprefix'),
-    autoprefixPlugin = new LessPluginAutoPrefix({browsers: ["last 2 versions"]});
-less.render(lessString, { plugins: [autoprefixPlugin] })
-  .then(
+const LessPluginAutoPrefixer = require('less-plugin-autoprefixer');
+
+less.render(lessString, {
+    plugins: [
+        new LessPluginAutoPrefixer({
+            browsers: ['> 0.5%, not dead'],
+        }),
+    ],
+}).then(({ css, map, imports }) => {
+    // ...
+});
 ```
 
-## Browser usage
+### Browser
 
-Browser usage is not supported at this time.
+Browser usage is not supported.
+
+[autoprefixer]: https://github.com/postcss/autoprefixer#readme
+[less-plugin-autoprefix]: https://github.com/less/less-plugin-autoprefix
