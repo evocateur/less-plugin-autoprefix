@@ -1,6 +1,6 @@
 {
   "name": "less-plugin-autoprefixer",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "autoprefixer plugin for less.js",
   "keywords": [
     "less plugins",

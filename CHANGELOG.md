@@ -1,6 +1,15 @@
-# Change Log
+# Changelog
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
+
+## [2.1.0](https://github.com/evocateur/less-plugin-autoprefix/compare/v2.0.0...v2.1.0) (2019-05-28)
+
+
+### Features
+
+* Bump autoprefixer & postcss majors ([1bb4974](https://github.com/evocateur/less-plugin-autoprefix/commit/1bb4974))
+
+
 
 <a name="2.0.0"></a>
 # 2.0.0 (2018-06-21)
